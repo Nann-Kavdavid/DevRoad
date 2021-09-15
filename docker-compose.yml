@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: ./docker/web
+    container_name: dev-road
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./src:/src
+    stdin_open: true
+    tty: true
